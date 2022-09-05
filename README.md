@@ -1,9 +1,9 @@
 # HopitalScheduler ReadMe
 ## Description :calendar: :face_with_head_bandage:
-Hopital Scheduler was named after French mathematician Guillaume de l'Hôpital because I was bored. This application was created to aid in the headaches that come with scheduling a surgical procedure by allowing patients direct ability to schedule an operation when they please and with the Surgeon of their choosing. This application works to reduce the confusion that comes with Insurance coverage and scheduling by being a one stop shop for both patients and providers.
+Hopital Scheduler was named after l'Hôpital because I was bored. It was created to mimick and support surgery scheduling procedures by giving patients the ability to request operations at their chosen time. Hopital also works to reduce the confusion that comes with Insurance coverage and scheduling by being a one stop shop for both patients and providers.
 
 ## Technologies Used 
-Hopital Scheduler is a full stack application built with Django, Django Template Language, and SQL.
+Hopital Scheduler is a full stack application built with Django, PostgreSQL, and idiocy.
 # User Stories 
 - As a new patient, I want to quickly navigate to where I can request/book time with a physician so that I don’t have to waste my time on hold.
 - As a patient with private insurance or Medicare/Medicaid, I only want to see providers that accept my insurance or Medicare/Medicaid so that my care is covered.
