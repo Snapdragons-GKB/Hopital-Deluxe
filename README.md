@@ -1,6 +1,6 @@
 # HopitalScheduler ReadMe
 ## Description :calendar: :face_with_head_bandage:
-Hopital Scheduler was named after l'Hôpital because I was bored. It was created to mimick and support surgery scheduling procedures by giving patients the ability to request operations at their chosen time. Hopital also works to reduce the confusion that comes with Insurance coverage and scheduling by being a one stop shop for both patients and providers.
+Hopital Scheduler was named after l'Hôpital because I was bored. It was created to mimick and support surgery scheduling procedures by giving patients the ability to request operations at their chosen time. Hopital is also designed to reduce the confusion that comes with Insurance coverage and scheduling by being a one stop shop for both patients and providers.
 
 ## Technologies Used 
 Hopital Scheduler is a full stack application built with Django, PostgreSQL, and idiocy.
