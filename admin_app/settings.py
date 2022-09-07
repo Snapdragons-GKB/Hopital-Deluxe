@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'admin_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Hopital',
+        'NAME': 'Hopital-Deluxe',
     }
 }
 
