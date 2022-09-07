@@ -1,5 +1,17 @@
 {% extends 'base.html' %}
-<!--  styling for provider -->
+{% load static %}
+{% block css %}
+    <link 
+    rel="general-stylesheet" 
+    href="{% static 'main_app/styles/general-style.css' %}"
+    type="text/css"
+    >
+{% endblock %}
+
+
+
+
+
 
 {% block content %}
 <header>
@@ -21,7 +33,8 @@
     </nav>
 </header>
 
-<main>
+<main className="general-main">
+    <p>General base</p>
     {% block main %}
 
 
