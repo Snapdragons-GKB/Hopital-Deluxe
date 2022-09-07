@@ -1,39 +1,12 @@
-{% extends 'base.html' %}
-{% block content %}
-<header>
-    <nav class="navbar is-link" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            {% if user.is_authenticated %}
-            <a class="navbar-item" href="{% url 'provider-home' %}">Provider</a>
-            {% endif %}
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
+{% extends 'provider-templates/provider-base.html'%}
+{% block main %}
 
-        <div class="navbar-menu navbar-end">
-            <a class="navbar-item" href="{% url 'provider-schedule' %}">Schedule</a>
-            <a class="navbar-item" href="{% url 'provider-detail' %}">Provider Detail</a>
-            <a class="navbar-item" href="{% url 'logout' %}">Logout</a>
-        </div>
-
-    </nav>
-</header>
 <div class="box">
     <p class="is-size-3">Details of Dr. {{user.last_name}} at Hopital:</p>{{patient}}
     <p>Background: {{blurb}}</p>
     <p>Field of practice: {{specialization}}</p>
     <p>Insurances taken above: {{insurances}}</p>
-
-
-    <!-- <ul>
-            {% for appointment in appointments %}
-                <li>{{appointment.time}}</li>
-            {% endfor %} -->
     
-
 </div>
 
 

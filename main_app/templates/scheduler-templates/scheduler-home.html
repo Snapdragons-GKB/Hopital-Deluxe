@@ -1,24 +1,6 @@
-{% extends 'base.html' %}
-{% block content %}
-<header>
-    <nav class="navbar is-link" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            {% if user.is_authenticated %}
-            <a class="navbar-item" href="{% url 'scheduler-home' %}">Scheduler</a>
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
-        <div class="navbar-menu navbar-end">
-            <a class="navbar-item" href="{% url 'scheduler-work' %}">Requests</a>
-            <a class="navbar-item" href="{% url 'logout' %}">Logout</a>
-        </div>
+{% extends 'scheduler-templates/scheduler-base.html' %}
+{% block main %}
 
-        {% endif %}
-    </nav>
-</header>
 <div class="box">
     <p class="is-size-3">Welcome back scheduler!</p>{{patient}}
 

@@ -1,25 +1,6 @@
-{% extends 'base.html' %}
-{% block content %}
-<header>
-    <nav class="navbar is-link" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="{% url 'patient-home' %}">Patient</a>
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
-        <div class="navbar-menu navbar-end">
-            <a class="navbar-item" href="{% url 'patient-detail' %}">Patient Detail</a>
-            <a class="navbar-item" href="{% url 'patient-request' %}">Patient Request</a>
-            <a class="navbar-item" href="{% url 'patient-request-history' %}">Patient Request History</a>
-            <a class="navbar-item" href="{% url 'logout' %}">Logout</a>
-        </div>
-        
-    </nav>
-</header>
-<main>
+{% extends 'patient-templates/patient-base.html' %}
+{% block main %}
+
     <p class="is-size-3">Patient Request History:</p>
 
     {%for incident in data%}
@@ -31,6 +12,6 @@
         <p>Accepted for treatment: {{incident.accepted}}</p>
         <br>
     {%endfor%}
-</main>
+
 
 {% endblock %}

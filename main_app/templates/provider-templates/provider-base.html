@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+<header>
+    <nav class="navbar is-link" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="{% url 'provider-home' %}">Provider Home</a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="navbar-menu navbar-end">
+            <a class="navbar-item" href="{% url 'provider-schedule' %}">Provider Schedule</a>
+            <a class="navbar-item" href="{% url 'provider-detail' %}">Provider Details</a>
+            <a class="navbar-item" href="{% url 'logout' %}">Logout</a>
+        </div>
+
+
+    </nav>
+</header>
+<main>
+    {% block main %}
+
+
+
+
+    
+    {% endblock %}
+
+
+
+
+</main>
+{% endblock %}
+

@@ -4,6 +4,7 @@ from django.views import View
 from main_app.forms import AdditionalPatient, AdditionalProvider, UserForm, PatientRequestForAppointment, UserLogin, EncounterForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, logout, get_user_model, login
+from django.http import HttpResponseRedirect
 
 from main_app.models import Scheduler, Patient, Provider, PatientRequestForAppointment as PRFA, User, Encounter
 User=get_user_model()
@@ -39,14 +40,14 @@ class Signup(View):
             login(request, user)
 
             if user.usertype == 'Patient':
-                 return render(request, "patient-templates/additional-patient-registration.html")
+                 return redirect('patient-registration')
             elif user.usertype == 'Scheduler':
                 sched = Scheduler()
                 sched.schedulerProfile=request.user
                 sched.save()
-                return render(request, "scheduler-templates/scheduler-home.html")
+                return redirect('scheduler-home')
             elif user.usertype == 'Provider':
-                return render(request, 'provider-templates/additional-provider-registration.html')
+                return redirect('provider-registration')
         else:
             return render(request, "general-templates/general-signup.html", context)
 
@@ -63,11 +64,11 @@ class Login(View):
             #redirect v render possible cause of telescoping page
             #user not recognized also possible cause of upper bar stiill being in logged out state
             if user.usertype == 'Patient':
-                return render(request, 'patient-templates/patient-home.html')
+                return redirect('patient-home')
             elif user.usertype == 'Scheduler':
-                return render(request, 'scheduler-templates/scheduler-home.html')
+                return redirect('scheduler-home')
             elif user.usertype == 'Provider':
-                return render(request, 'provider-templates/provider-home.html')
+                return redirect('provider-home')
         else:
             return render(request, 'general-templates/general-login.html', {'form': form})
 
@@ -76,7 +77,7 @@ class Logout(View):
         user=request.user
         if user is not None:
             logout(request)
-            return render(request, "general-templates/general-landingpage.html")
+            return redirect('landing')
 
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -152,7 +153,7 @@ class Patient_Request_Appointment(View):
             patientrequest.patientLast=request.user.last_name
             patientrequest.email=request.user.email
             patientrequest.save()
-            return render(request, "patient-templates/patient-home.html")
+            return redirect('patient-home')
         else:
             return render(request, "patient-templates/patient-request.html", context)
 
@@ -218,7 +219,7 @@ class Provider_Additional_Reg(View):
             provider = form.save(commit=False)
             provider.providerProfile =request.user
             provider.save()
-            return render(request, "provider-templates/provider-home.html")
+            return redirect('provider-home')
 
         else:
             return render(request, "provider-templates/additional-provider-registration.html", context)
