@@ -2,11 +2,12 @@
 {% block main %}
 
 <div class="container mt-2">
-  <div class="notification is-danger has-text-left pl-3">
-    <h1 class="title">Patient request for treatment</h1>
-    <form method="post" action="{% url 'patient-request' %}" >
-      {% csrf_token %} {{ form.as_p }}
-      <input type="submit" class="btn" value="Click submit a request for treatment!" />
+  <div class="notification has-text-left pl-3">
+    <h1 class="title">Appointment request form</h1>
+    <form method="post" action="{% url 'patient-request' %}">
+      {% csrf_token %} {{ form.as_div }}
+      <br>
+      <input type="submit" class="btn" value="Click to submit an appointment request!" />
 
     </form>
   </div>

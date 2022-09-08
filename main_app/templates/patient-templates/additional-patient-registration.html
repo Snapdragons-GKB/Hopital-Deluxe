@@ -3,7 +3,8 @@
 
 
 <h1 class="title">Additional Patient Registration</h1>
-<form method="post" action="{% url 'patient-registration' %}">
+<form method="post" action="{% url 'patient-registration' %}" style="list-style-type: disc;">
+
   {% csrf_token %} {{ form.as_p }}
   <input type="submit" class="btn" value="Click to register as patient!" />
 
