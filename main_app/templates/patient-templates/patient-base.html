@@ -1,35 +1,31 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'main_app/styles/patient-style.css' %}">
+{% endblock %}
+
 {% block content %}
+
 <header>
-    <nav class="navbar is-link" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-link has-background-link" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            {% if user.is_authenticated %}
             <a class="navbar-item" href="{% url 'patient-home' %}">Patient</a>
-            {% else %}
-            <a class="navbar-item" href="{% url 'login' %}">Not logged in</a>
-            {% endif %}
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </a>
         </div>
-        {% if user.is_authenticated %}
         <div class="navbar-menu navbar-end">
             <a class="navbar-item" href="{% url 'patient-detail' %}">Patient Detail</a>
             <a class="navbar-item" href="{% url 'patient-request' %}">Patient Request</a>
             <a class="navbar-item" href="{% url 'patient-request-history' %}">Patient Request History</a>
             <a class="navbar-item" href="{% url 'logout' %}">Logout</a>
         </div>
-        {% else %}
-        <div class="navbar-menu navbar-end">
-            <a class="navbar-item" href="{% url 'signup' %}">Sign Up</a>
-            <a class="navbar-item" href="{% url 'login' %}">Log In</a>
-        </div>
-        {% endif %}
     </nav>
 </header>
-<main>
+<main class="column mt-3 is-half is-offset-one-quarter">
     {% block main %}
 
 
@@ -42,6 +38,7 @@
 
 
 </main>
-
+<h1>GKB Hospital</h1>
+<h2>Home to the GKB Hospital</h2>
 
 {% endblock %}

@@ -1,12 +1,10 @@
 {% extends 'base.html' %}
+
 {% load static %}
 {% block css %}
+{{block.super}}
 <link rel="stylesheet" href="{% static 'main_app/styles/general-style.css' %}">
 {% endblock %}
-
-
-
-
 
 
 
@@ -31,8 +29,7 @@
 </header>
 
 
-<main class="column   mt-3
-            is-half is-offset-one-quarter">
+<main class="column mt-3 is-half is-offset-one-quarter">
     {% block main %}
 
 

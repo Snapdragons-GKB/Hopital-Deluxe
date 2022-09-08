@@ -7,11 +7,11 @@ User = get_user_model()
 
 class CheckPasswordBackend(ModelBackend):
     def authenticate(self, request=None, username=None, password=None):
-        print("attempting to authenticate with username: {} and password: {}".format(username, password))
+        # print("attempting to authenticate with username: {} and password: {}".format(username, password))
         try:
             prelim = User.objects.get(username=username)
-            print("seeing that the user exists, with username: {} and password: {}".format(prelim.username, prelim.password))
-            print(prelim.check_password(password))
+            # print("seeing that the user exists, with username: {} and password: {}".format(prelim.username, prelim.password))
+            # print(prelim.check_password(password))
             if prelim.check_password(password):
                 return prelim
             else:

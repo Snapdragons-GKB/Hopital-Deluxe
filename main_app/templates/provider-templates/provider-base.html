@@ -1,7 +1,15 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+
+<link rel="stylesheet" href="{% static 'main_app/styles/provider-style.css' %}">
+{% endblock %}
+
+
 {% block content %}
 <header>
-    <nav class="navbar is-link" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-link has-background-link"role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="{% url 'provider-home' %}">Provider Home</a>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">

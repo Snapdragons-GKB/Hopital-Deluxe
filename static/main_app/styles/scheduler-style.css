@@ -1,9 +1,8 @@
-
 /* Important to note that section styles are within body, have access to header, body, footer   */
 
 main{
     width: 100vw;
     height: 100vh;
     border: black;
-    background-color: pink;
+    background-color: blue;
 }

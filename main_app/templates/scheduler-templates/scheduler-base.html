@@ -1,9 +1,16 @@
 {% extends 'base.html'%}
+{% load static %}
+
+
+{% block css %}
+{{block.super}}
+<link rel="stylesheet" href="{% static 'main_app/styles/scheduler-style.css' %}">
+{% endblock %}
+
 {% block content %}
 <header>
-    <nav class="navbar is-link" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-link has-background-link" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-
             <a class="navbar-item" href="{% url 'scheduler-home' %}">Scheduler</a>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
