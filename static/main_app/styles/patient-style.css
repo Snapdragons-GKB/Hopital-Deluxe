@@ -3,7 +3,8 @@
 body {
     border: black;
     border-style: solid;
-    background-color: red;
+    background-color: pink;
+    min-height: 100vh;
 }
 
 

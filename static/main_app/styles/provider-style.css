@@ -4,6 +4,7 @@ body {
     border: black;
     border-style: solid;
     background-color: purple;
+    min-height: 100vh;
 }
 
 
