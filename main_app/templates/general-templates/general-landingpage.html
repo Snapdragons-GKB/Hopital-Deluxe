@@ -1,7 +1,9 @@
 {% extends 'general-templates/general-base.html' %}
 {% load static %}
 
-
+{% block css %}
+<link rel="stylesheet" href="{% static 'main_app/styles/general-style.css' %}">
+{% endblock %}
 
 
 {% block main %}
