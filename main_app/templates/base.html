@@ -7,38 +7,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-    <!-- checks if authenticated -->
 
+    <!-- for the love of god do not touch this -->
     {% block css %}
     <link rel="stylesheet" href="{% static 'main_app/styles/general-style.css' %}">
-
-
     {% endblock %}
-
-    <!-- {% if user.is_authenticated %}
-
-        {% if user.usertype == "provider" %}
-            print("provider")
-            <link rel="stylesheet" href="{% static 'main_app/styles/provider-style.css' %}">
-        {% elif user.usertype == "patient" %}
-            <link rel="stylesheet" href="{% static 'main_app/styles/patient-style.css' %}">
-        {% elif user.usertype == "scheduler" %}
-            <link rel="stylesheet" href="{% static 'main_app/styles/scheduler-style.css' %}">
-        {% endif %}
-    {% else %}
-        <link rel="stylesheet" href="{% static 'main_app/styles/general-style.css' %}">
-    {% endif %} -->
-
-    
-    <!-- <link rel="stylesheet" href="{% static 'main_app/styles/general-style.css' %}"> -->
-    <!-- <link rel="stylesheet" href="{% static 'main_app/styles/patient-style.css' %}"> -->
-    <!-- <link rel="stylesheet" href="{% static 'main_app/styles/scheduler-style.css' %}"> -->
-    <!-- <link rel="stylesheet" href="{% static 'main_app/styles/provider-style.css' %}"> -->
-
-    <!-- <link rel="stylesheet" href="{% static 'main_app/styles/style.css' %}"> -->
-
-
-
 
     <script src="{%  static '/main_app/scripts/script.js' %}" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -48,7 +21,7 @@
 
 </head>
 
-<body class="hero is-full-height">
+<body class="">
     {% block content %}
 
         
