@@ -200,9 +200,9 @@ class AdditionalProvider(ModelForm):
         ('Available', 'Available')
 
     ]
-    provider_personal_blurb = forms.CharField(max_length=200)
-    provider_specialization = forms.ChoiceField(choices=SPECIALTY_CHOICE,  initial=AVAILABILITY_CHOICES[0])
-    provider_insurances_taken = forms.ChoiceField(choices=INSURANCE_CHOICE,  initial=AVAILABILITY_CHOICES[0])
+    provider_personal_blurb = forms.CharField(max_length=200, label='Blurb')
+    provider_specialization = forms.ChoiceField(choices=SPECIALTY_CHOICE,  initial=AVAILABILITY_CHOICES[0],label='Specialization')
+    provider_insurances_taken = forms.ChoiceField(choices=INSURANCE_CHOICE,  initial=AVAILABILITY_CHOICES[0], label='Insurances')
     monday = forms.ChoiceField(choices=AVAILABILITY_CHOICES,  initial=AVAILABILITY_CHOICES[1])
     tuesday = forms.ChoiceField(choices=AVAILABILITY_CHOICES,  initial=AVAILABILITY_CHOICES[1])
     wednesday = forms.ChoiceField(choices=AVAILABILITY_CHOICES,  initial=AVAILABILITY_CHOICES[1])
@@ -255,7 +255,7 @@ class AdditionalProvider(ModelForm):
         labels = {
             'provider_personal_blurb': 'Personal Blurb',
             'provider_specialization': 'Specialization',
-            'provider_insurances_taken': 'Insurance Taken',
+            'provider_insurances_taken': ' asdfInsurance Taken',
             'monday': 'Monday',
             'tuesday': 'Tuesday',
             'wednesday': 'Wednesday',

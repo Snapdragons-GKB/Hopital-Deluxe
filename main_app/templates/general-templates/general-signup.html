@@ -1,11 +1,15 @@
 {% extends 'general-templates/general-base.html' %}
 {% block main %}
 
+
 <h1 class="title">Sign Up</h1>
+<p> To create an account, please complete the fields below. </p>
+
+
 <form method="post" action="{% url 'signup' %}">
     {% csrf_token %} {{ form.as_p }}
-    <input type="submit" class="btn" value="Sign Up" />
-    <input type="hidden" name="next" value="{{ next }}" />
+    <input type="submit" class="btnnnn" value="Sign Up" />
+    <!-- <input type="hidden" name="next" value="{{ next }}" /> -->
 </form>
 
 {% endblock %}
