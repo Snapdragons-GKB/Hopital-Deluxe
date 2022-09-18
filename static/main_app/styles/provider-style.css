@@ -18,3 +18,48 @@ main{
     border-bottom-right-radius: 2vh;
     
 }
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20vw;
+
+
+
+    margin: 3vh 0;
+    margin-top: 3vh;
+    padding-bottom: 3vh;
+
+    border-bottom-left-radius: 2vh;
+    border-bottom-right-radius: 2vh;
+}
+
+label {
+    display: inline-block;
+    width:100px;
+    text-align: right;
+    margin-bottom:1vh;
+}
+/* 
+background-color: #CC1022;
+    background-color: #885466;
+    background-color: #AA8799;
+    background-color: #543343;
+    background-color: #766688;
+    background-color: #435465;
+    background-color: #668899;
+    background-color: #113343;
+    background-color: #237688;
+    background-color: #99BBBB;
+    background-color: #CCEEED;
+    background-color: #002211;
+    background-color: #549966;
+    background-color: #335532;
+    background-color: #BAEEBA;
+    background-color: #88BB88;
+    background-color: #EDFFDD;
+    background-color: #543333;
+    background-color: #BB9999;
+    background-color: #983333;
+    background-color: #FFDDDD; */
