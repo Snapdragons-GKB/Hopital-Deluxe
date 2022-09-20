@@ -1,15 +1,22 @@
 {% extends 'general-templates/general-base.html' %}
 {% block main %}
 
+<div class="container mt-2">
+    <div class="notification has-text-left pl-3">
+        <h1 class="title">Sign Up</h1>
+        <p> To create an account, please complete the fields below. </p>
 
-<h1 class="title">Sign Up</h1>
-<p> To create an account, please complete the fields below. </p>
 
-
-<form method="post" action="{% url 'signup' %}">
-    {% csrf_token %} {{ form.as_p }}
-    <input type="submit" class="btnnnn" value="Sign Up" />
-    <!-- <input type="hidden" name="next" value="{{ next }}" /> -->
-</form>
+        <form method="post" action="{% url 'signup' %}">
+            {% csrf_token %}
+            <table>
+                {{ form.as_table }}
+            </table>
+            <br>
+            <input type="submit" class="btnnnn" value="Sign Up" />
+            <!-- <input type="hidden" name="next" value="{{ next }}" /> -->
+        </form>
+    </div>
+</div>
 
 {% endblock %}

@@ -1,27 +1,29 @@
 {% extends 'patient-templates/patient-base.html' %}
 {% block main %}
-    
+<!-- {'n' : range(n) } -->
 
-    <h1 class="has-text-centered title is-3 mt-1">
-         Patient Details
-    </h1>
-    
+<h1 class="has-text-centered title is-3 mt-1">Details of {{user.first_name}} {{user.last_name}}</h1>
 
-    <div class="container">
-        <div class="notification">
-            
-            <h1 class="title is-5 mb-3"> {{user.first_name}}'s Age: </h1>
-            <p class="has-text-black ">{{age}}</p>
-            <br>
-            <h1 class="title is-5 mb-3">{{user.first_name}}'s Insurance Type:</h1>
-            <p class="has-text-black  ">{{insurance}}</p>
-            <br>
-            <h1 class="title is-5 mb-3">{{user.first_name}}'s Preexisting Conditions:</h1>
-            <p class=" has-text-black">{{conditions}}</p>
-            <br>
-            <h1 class="title is-5 mb-3">{{user.first_name}}'s Current Medications:</h1>
-            <p class="has-text-black">{{medications}}</p>
-        
-        </div>
-    </div>
+<div class = 'history-table'>
+    <table>
+        <thead>
+            <th>Age</th>
+            <th>Insurance</th>
+            <th>Conditions</th>
+            <th>Medications</th>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>{{age}}</td>
+                <td>{{insurance}} </td>
+                <td>{{conditions}}</td>
+                <td>{{medications}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
 {% endblock %}

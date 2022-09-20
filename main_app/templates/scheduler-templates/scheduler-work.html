@@ -6,19 +6,80 @@
     {% if not patientID %}
     <p> None today chief. Keep it up.</p>
     {% else %}
+    <div class = 'work-patient'>
+        <table class = 'work-patient-table'>
+            <thead>
+                <th>Request ID</th>
+                <th>Name</th>
+                <th>Insurance Status</th>
+                <th>Preferred Date</th>
+            </thead>
+            <tbody>
     
+                <tr>
+                    <td>ReqIDDDD</td>
+                    <td>{patientFirst}} {{patientLast}} </td>
+                    <td>{{patientInsurance}}</td>
+                    <td>{{day}}</td>
+    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+
+    <div class = 'work-ailment'>
+        <table class = 'work-ailment-table'>
+            <thead>
+                <th>Request ID</th>
+                <th>Patient Ailment</th>
+                <th>Ailment Description</th>
+
+            </thead>
+            <tbody>
+    
+                <tr>
+                    <td>ReqIDDDD</td>
+                    <td>{{patientAilmentCategory}} </td>
+                    <td>{{patientAilmentDescription}}</td>
+    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    
+    <div class = 'work-doctor'>
+        <table class = 'work-doctor-table'>
+            <thead>
+                <th>Doctor ID</th>
+                <th>Patient Ailment</th>
+                <th>Ailment Description</th>
+
+            </thead>
+            <tbody>
+    
+                <tr>
+                    <td>DocIDDDD</td>
+                    <td>{{providerFirst}} {{providerLast}} </td>
+                    <td>{{providerSpecialization}}</td>
+    
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <div class="box">
-        <p class="is-size-4">Patient request:</p>
+        <!-- <p class="is-size-4">Patient request:</p>
         <p>Name: {{patientFirst}} {{patientLast}}</p>
         <p>Insurance status: {{patientInsurance}}</p>
-        <p>Preferred day of scheduling: {{day}}</p>
+        <p>Preferred day of scheduling: {{day}}</p> -->
 
-        <p class="is-size-4">Patient ailment description:</p>
+        <!-- <p class="is-size-4">Patient ailment description:</p>
         <p>Ailment category: {{patientAilmentCategory}}</p>
-        <p>Ailment description: {{patientAilmentDescription}}</p>
-        <p class="is-size-4">Recommended doctor:</p>
+        <p>Ailment description: {{patientAilmentDescription}}</p> -->
+        <!-- <p class="is-size-4">Recommended doctor:</p>
         <p>Name: {{providerFirst}} {{providerLast}}</p>
-        <p>Specialty: {{providerSpecialization}}</p>
+        <p>Specialty: {{providerSpecialization}}</p> -->
     </div>
 
 

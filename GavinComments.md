@@ -13,3 +13,14 @@ pip3 install django-simple-bulma
 ## Much later in the day
 
 Nope. Don't. Don't very much so.
+
+
+
+
+
+
+## 9/19
+
+Need to 
+1) Fix or verify response cycle for scheduling 
+2) Remove siginin type

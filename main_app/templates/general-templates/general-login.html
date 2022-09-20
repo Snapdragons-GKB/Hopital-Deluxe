@@ -1,13 +1,25 @@
 {% extends 'general-templates/general-base.html' %}
 {% block main %}
 
-<h1 class="title">Log In</h1>
-<form method="post" action="{% url 'login' %}">
-  {% csrf_token %} {{ form.as_p }}
- 
-  <input type="submit" class="btn" value="login" />
+<div class="container mt-2">
+  <div class="notification has-text-left pl-3">
+    
+    <h1 class="title">Log in to your Account</h1>
+    <p> To log in, please enter your identifying information. </p>
+    <form method="post" action="{% url 'login' %}">
+      {% csrf_token %}
+      
+      <table class="login-table">
+        {{ form.as_table }}
+      </table>
+      <br>
+
+      <input type="submit" class="btn" value="Click to log in." />
 
 
-</form>
+
+    </form>
+  </div>
+</div>
 
 {% endblock %}

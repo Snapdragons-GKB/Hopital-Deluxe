@@ -130,9 +130,9 @@ class AdditionalPatient(ModelForm):
     ]
     patient_age = forms.IntegerField()
     # patient_insurance_type = forms.CharField(max_length=20, choices=INSURANCE_CHOICE.choices, default=INSURANCE_CHOICE.choices[0][0])
-    patient_insurance_type = forms.ChoiceField(choices=INSURANCE_CHOICE, required=True)
-    patient_preexisting_conditions = forms.CharField(max_length=200)
-    patient_current_medications = forms.CharField(max_length=200)
+    patient_insurance_type = forms.ChoiceField(choices=INSURANCE_CHOICE, required=True, label="Insurance")
+    patient_preexisting_conditions = forms.CharField(max_length=200, label="Conditions")
+    patient_current_medications = forms.CharField(max_length=200, label="Medications")
 
     class Meta:
         INSURANCE_CHOICE = [

@@ -3,11 +3,17 @@
 
 <div class="container mt-2">
   <div class="notification has-text-left pl-3">
-    <h1 class="title">Appointment request form</h1>
+    <h1 class="title">Request an Appointment</h1>
+    <p> To request an appointment, please enter your issue and relevant symptomology. </p>
     <form method="post" action="{% url 'patient-request' %}">
-      {% csrf_token %} {{ form.as_div }}
+      {% csrf_token %}
+      <table class="patient-request">
+        {{ form.as_table }}
+
+      </table>
+       
       <br>
-      <input type="submit" class="btn" value="Click to submit an appointment request!" />
+      <input type="submit" class="btn" value="Submit your request!" />
 
     </form>
   </div>

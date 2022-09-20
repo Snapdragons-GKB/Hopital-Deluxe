@@ -24,9 +24,6 @@ form {
     display: flex;
     flex-direction: column;
     margin-left: 20vw;
-
-
-
     margin: 3vh 0;
     margin-top: 3vh;
     padding-bottom: 3vh;
@@ -36,8 +33,10 @@ form {
 }
 
 label {
-    display: inline-block;
+
     width:100px;
-    text-align: right;
+    text-align: left;
     margin-bottom:1vh;
+    margin-right: 1vw;
+
 }
