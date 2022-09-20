@@ -3,7 +3,7 @@
 body {
     border: black;
     border-style: solid;
-    background-color: green;
+    background-color: #885466;
     min-height: 100vh;
 }
 
@@ -20,10 +20,14 @@ main{
 }
 
 
+
+
 .work-patient-table, .work-ailment-table, .work-doctor-table {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
+
+
 }
 
 
@@ -34,7 +38,7 @@ main{
 
 .work-patient-table th, .work-ailment-table th, .work-doctor-table th { /* table header */
     text-align: center;
-    min-width: 10vw;
+
     background-color: #549966;
     padding: 1vh;
 }
@@ -44,10 +48,15 @@ main{
     border: black;
     border-style: solid;
     margin-right: 1vw;
+
 }
 
 .work-patient-table td, .work-ailment-table td, .work-doctor-table td { /* table data element */
     margin-right: 1vw;
     margin-left: 1vw;
+    padding: 1vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    
 
 }
