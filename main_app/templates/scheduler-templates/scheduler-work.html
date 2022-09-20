@@ -1,103 +1,108 @@
 {% extends 'scheduler-templates/scheduler-base.html' %}
 {% block main %}
 
-<div class="box">
-    <p class="is-size-3">Request awaiting correspondence:</p>{{patient}}
-    {% if not patientID %}
-    <p> None today chief. Keep it up.</p>
-    {% else %}
-    <div class = 'work-patient'>
-        <table class = 'work-patient-table'>
-            <thead>
-                <th>Request ID</th>
-                <th>Name</th>
-                <th>Insurance Status</th>
-                <th>Preferred Date</th>
-            </thead>
-            <tbody>
-    
-                <tr>
-                    <td>ReqIDDDD</td>
-                    <td>{patientFirst}} {{patientLast}} </td>
-                    <td>{{patientInsurance}}</td>
-                    <td>{{day}}</td>
-    
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <br>
 
-    <div class = 'work-ailment'>
-        <table class = 'work-ailment-table'>
-            <thead>
-                <th>Request ID</th>
-                <th>Patient Ailment</th>
-                <th>Ailment Description</th>
+<p class="is-size-3 has-text-centered">Request awaiting correspondence:</p>{{patient}}
+{% if not patientID %}
+<p> None today chief. Keep it up.</p>
+{% else %}
+<div class='work-patient-table'>
+    <table>
+        <thead>
+            <th>Request ID</th>
+            <th>Name</th>
+            <th>Insurance Status</th>
+            <th>Preferred Date</th>
+        </thead>
+        <tbody>
 
-            </thead>
-            <tbody>
-    
-                <tr>
-                    <td>ReqIDDDD</td>
-                    <td>{{patientAilmentCategory}} </td>
-                    <td>{{patientAilmentDescription}}</td>
-    
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <br>
-    
-    <div class = 'work-doctor'>
-        <table class = 'work-doctor-table'>
-            <thead>
-                <th>Doctor ID</th>
-                <th>Patient Ailment</th>
-                <th>Ailment Description</th>
+            <tr>
+                <td>ReqIDDDD</td>
+                <td>{patientFirst}} {{patientLast}} </td>
+                <td>{{patientInsurance}}</td>
+                <td>{{day}}</td>
 
-            </thead>
-            <tbody>
-    
-                <tr>
-                    <td>DocIDDDD</td>
-                    <td>{{providerFirst}} {{providerLast}} </td>
-                    <td>{{providerSpecialization}}</td>
-    
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="box">
-        <!-- <p class="is-size-4">Patient request:</p>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<br>
+
+<div class='work-ailment-table'>
+    <table>
+        <thead>
+
+            <th>Patient Ailment</th>
+            <th>Ailment Description</th>
+
+        </thead>
+        <tbody>
+
+            <tr>
+
+                <td>{{patientAilmentCategory}} </td>
+                <td>{{patientAilmentDescription}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+<br>
+
+<div class='work-doctor-table'>
+    <table>
+        <thead>
+            <th>Doctor ID</th>
+            <th>Patient Ailment</th>
+            <th>Ailment Description</th>
+
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>DocIDDDD</td>
+                <td>{{providerFirst}} {{providerLast}} </td>
+                <td>{{providerSpecialization}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- <div class="box"> -->
+<!-- <p class="is-size-4">Patient request:</p>
         <p>Name: {{patientFirst}} {{patientLast}}</p>
         <p>Insurance status: {{patientInsurance}}</p>
         <p>Preferred day of scheduling: {{day}}</p> -->
 
-        <!-- <p class="is-size-4">Patient ailment description:</p>
+<!-- <p class="is-size-4">Patient ailment description:</p>
         <p>Ailment category: {{patientAilmentCategory}}</p>
         <p>Ailment description: {{patientAilmentDescription}}</p> -->
-        <!-- <p class="is-size-4">Recommended doctor:</p>
+<!-- <p class="is-size-4">Recommended doctor:</p>
         <p>Name: {{providerFirst}} {{providerLast}}</p>
         <p>Specialty: {{providerSpecialization}}</p> -->
-    </div>
+<!-- </div> -->
 
 
-        <!-- <input type="submit" method="post" action="{% url 'scheduler-work' %}" class="button is-link"> I want this
+<!-- <input type="submit" method="post" action="{% url 'scheduler-work' %}" class="button is-link"> I want this
         patient to succeed </button>
         <input type="kill" method="post" action="{% url 'scheduler-work' %}" class="button is-danger"> I hate this
         patient and he deserves the American healthcare system </button> -->
 
-    
-    
-    <form method="post" action="{% url 'scheduler-work' %}">
-        {% csrf_token %} {{form.as_p}}
-        <button type="submit" method="post" class="button is-link" action="{% url 'scheduler-work' %}" class="button is-link" value="Accepted"> Submit</button>
-        <button type="submit" method="post" class="button is-danger" action="{% url 'scheduler-work' %}" class="button is-link" value="False"> Look at this schmuck! </button>
-        
-    </form>
 
-    {% endif %}
+
+<form method="post" action="{% url 'scheduler-work' %}">
+    {% csrf_token %} 
+    
+    
+    {{form.as_p}}
+    <button type="submit" method="post" class="button is-link" action="{% url 'scheduler-work' %}"
+        class="button is-link" value="Accepted"> Submit</button>
+    <button type="submit" method="post" class="button is-danger" action="{% url 'scheduler-work' %}"
+        class="button is-link" value="False"> Look at this schmuck! </button>
+
+</form>
+
+{% endif %}
 
 
 

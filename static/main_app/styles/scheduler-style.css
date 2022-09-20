@@ -18,3 +18,36 @@ main{
     border-bottom-right-radius: 2vh;
     
 }
+
+
+.work-patient-table, .work-ailment-table, .work-doctor-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+
+
+.work-patient-table th, .work-ailment-table th, .work-doctor-table th { /* table header */
+    text-align: center;
+    min-width: 10vw;
+    background-color: #549966;
+    padding: 1vh;
+}
+
+.work-patient-table tr, .work-ailment-table tr, .work-doctor-table tr { /* table row */
+    text-align: center;
+    border: black;
+    border-style: solid;
+    margin-right: 1vw;
+}
+
+.work-patient-table td, .work-ailment-table td, .work-doctor-table td { /* table data element */
+    margin-right: 1vw;
+    margin-left: 1vw;
+
+}
