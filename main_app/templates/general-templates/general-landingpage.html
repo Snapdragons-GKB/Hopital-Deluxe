@@ -7,17 +7,82 @@
 
 
 {% block main %}
-<div>
-    <h1 class="title is-1 has-text-centered">Welcome to Hopital!</h1>
+<div className='landing-box'>
+    <h1 class="title is-2 has-text-centered">Welcome to Hopital!</h1>
     <article class="landing-about">
-        As the region's most preferred independent orthopedic and neurosurgery practice, our doctors are the dedicated experts in providing the highest level of treatment for the bone, joint, and muscle needs of Portland, Vancouver, and Lake Oswego, and the surrounding communities. Since 1969, we have remained committed to delivering specialized orthopedic and neurological care that helps you restore your strength, reclaim your life, and rebound.
+        <p>
+            A common problem in American healthcare is surgery scheduling.
+            Several systems that cover this problem, among others, are <a
+                href="https://en.wikipedia.org/wiki/Epic_Systems" target="_blank">Epic</a>, <a
+                href="https://en.wikipedia.org/wiki/Cerner_Corporation" target="_blank">Cerner</a>, and <a
+                href="https://en.wikipedia.org/wiki/Allscripts" target="_blank">Allscripts</a>.
+            Surgery scheduling is a fairly nuanced process that involves communication between several classes of
+            stakeholders.
 
-The specialty-trained doctors of Rebound Orthopedics & Neurosurgery provide treatment for orthopedic and neurological injuries and conditions affecting the ankle, back, elbow, foot, hand, hip, knee, neck, shoulder, spine, and wrist as well as specialized care in family medicine, joint replacement & revision, neurosurgery/brain, orthopedic trauma, physical medicine & rehabilitation, and sports medicine.
 
-Our world-class team of orthopedic and neurosurgical experts is devoted to providing customized treatment plans focused on your needs and goals.
+        </p>
+        <br>
+        <p>
+            If you have a patient portal under your provider or health insurance, you might see a variety of options to
+            request treatment.
+            Once you submit a request, it will commonly be met by a surgery scheduler, who decides on whether to approve
+            a date for an appointment or procedure.
+            This decision is made based on a variety of factors, including your insurance status, whether you have
+            previously frequented the practice, and the overall fill of the practice.
+            There is even nuance within the doors of smaller private practices. While some surgery systems, like Kaiser,
+            see exclusively patients
+            who own their own insurance, other practices may have a wide variety of providers who have different
+            opinions on
+            how many medicare or medicaid-insured patients they can see in a day. While it varies by subspecialty,
+            it's generally accurate to say that patients with either of these insurances do not pay particularly well,
+            whereas
+            privately insured patients tend to pay better. But I digress.
 
-At Rebound Orthopedics & Neurosurgery, we specialize in helping you rebound.
+        </p>
+        <br>
+        <p>
+            To cut a long story short, a surgery scheduler needs to be able to see doctor availability.
+            Doctors do not have the same schedules, but the real difficulty is in getting patients into rooms and
+            operating rooms.
+            There is currently a significant shortage of nurses and anesthesiologists, and the number of beds in
+            hospitals can become
+            a significant bottleneck, especially in rural practices. We don't mimick either in Hopital, but it may help
+            to motivate intuition
+            for why systems like Hopital are significant and necessary.
+            If we were career-oriented cowards, we would say that Hopital is intended purely for telehealth,
+            hence obviating the need to represent beds and heads, but we're just not that good (yet).
+
+        </p>
+        <br>
+        <p>
+            In Hopital, we attempted to model the scheduling process as closely as possible.
+            We include portals for patients, providers (doctors/podiatrists/physicians), and surgery schedulers.
+            If you create an account, you can log in as any of the three.
+            Each account has several features.
+            If you are a patient, for example, you can request an appointment, see your past/upcoming appointments, and
+            update your health profile.
+            As a surgery scheduler, your job is to match requests and providers, and to make sure that the practice is
+            not overbooked.
+            As a provider, well, you're a doctor. You can see your upcoming appointments, and you can set/update your
+            availability.
+
+
+
+
+        </p>
+        <br>
+        <p>
+            We encourage you to take a look around!
+            Health care networks are incredibly complex, and there is always more to do, but we were proud of what we
+            were able to accomplish in five days with three devs.
+            Welcome to Hopital. May your sheets be clean and your acetabular components stay tight!
+
+        </p>
+
+
+
     </article>
-    <p class="subtitle is-4 has-text-centered">This is a website for scheduling appointments at a hospital.</p>
+    <br>
+
 </div>
 {% endblock %}

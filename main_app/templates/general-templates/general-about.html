@@ -2,13 +2,82 @@
 
 {% block main %}
 
+<div className='landing-box'>
+    <h1 class="title is-2 has-text-centered">What we used, how we flowed</h1>
+    <article class="landing-about">
+        <p>
+            Hopital was created using fullstack Django with PSQL. Two of us had no previous Python
+            experience (none)
+            before starting Hopital, and it was a bit of a risk to take with a one-week project. Nevertheless, we dove
+            into the work
+            and got it done. Bella handled front end integration of our data, Kate handled styling, and Gavin handled
+            the backend of our project.
+            We somewhat naively managed to run into every wall imaginable along the way, so we will discuss several
+            increasingly hilarious failures we
+            ran into. Almost all of them were Gavin's fault, so we'll let him take the lead on this one.
 
-<p class="card-content">
-    Hello,
-    Hopital application was created to aid in the headaches that come with scheduling a surgical procedure by allowing
-    patients direct ability to schedule an operation when they please and with the Surgeon of their choosing. This
-    application works to reduce the confusion that comes with Insurance coverage and scheduling by being a one stop shop
-    for both patients and providers.</p>
 
+        </p>
+        <br>
+        <p>
+            A common antipattern in our development process with Django was that it liked to defy gravity.
+            We always planned to have authentication (cough *HIPAA* cough), and we started with Django's built-in
+            authentication system, which is
+            quite approachable. However, we also planned to have multiple user logins. We began building them out, but
+            nothing was working. I
+            started chopping away at necessary parts that were innate to the base authentication system, and it kept
+            working. I was baffled. After some
+            painful refactoring, we had multiple user logins. We were so proud of ourselves. We were so wrong. We had no
+            idea what we were doing.
+
+        </p>
+        <br>
+        <p>
+            I then began to extend our user model creations. Again, extension wasn't working. Again, I started chopping
+            away, and it again kept working.
+            I then dove into abstract user model extension, and after more lines and a couple extra data tables, we had
+            working user models.
+
+        </p>
+        <br>
+        <p>
+            The cream of the crop, however, lay in the tall grass of login pathing for custom user models. After we had
+            custom user models for the three classes,
+            our login system took a nosedive. I was pretty baffled. I ended up having to create a custom backend for
+            login, and everything was great, until it wasn't working either.
+            A couple days prior, I had noticed that our passwords, per Django standard, were stored hashed, which is
+            common and reasonable. What I didn't realized
+            until four in the morning the day of presentation was, well, I'll leave it to a limerick I wrote.
+
+        </p>
+        <br>
+        <p>There once was a boy imprecise</p>
+        <p>With two passwords that weren't very nice</p>
+        <p>They riddled him with words</p>
+        <p>Til he realized the absurd</p>
+        <p>My god, I hashed them both twice</p>
+
+
+        <br>
+        <p>
+            I had been comparing my stored passwords to the correctly hashed input, but I had actually been comparing my
+            hashed stored
+            hashed passwords to our hashed input. Ouch. Understanding totients, implementing hashes, not the same thing.
+
+        </p>
+        <br>
+        <p>
+            It was pretty smooth sailing from there. It looked a bit rough in our presentation, but we had a ton of depth
+            in the structural work we did behind the scenes. We were able to get a lot of the functionality we wanted
+            in, and it was a vigorous learning experience to say the least.
+
+        </p>
+
+
+
+    </article>
+    <br>
+
+</div>
 
 {% endblock %}
