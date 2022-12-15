@@ -95,13 +95,24 @@ WSGI_APPLICATION = 'admin_app.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Hopital-Deluxe',
+if IS_HEROKU:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'db4o60o5mkbqm1',
+            'USER': 'ajnzvopifjyhfg',
+            'PASSWORD': '58497b3fea6a2452393e0de9755f7e1625a35e671c4ad20877569e2eb72b698d',
+            'HOST': 'ec2-52-3-60-53.compute-1.amazonaws.com',
+            'PORT':  5432,
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'Hopital-Deluxe',
+        }
+    }
 
 
 #Extending the default user model
