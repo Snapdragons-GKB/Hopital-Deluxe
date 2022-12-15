@@ -162,7 +162,9 @@ USE_TZ = True
 PROJECT_ROOT = os.path.dirname(os.path.dirname(__file__))
 print(PROJECT_ROOT, BASE_DIR)
 STATICFILES_DIRS = [
+    os.path.join(PROJECT_ROOT, 'main_app/static/main_app'),
     os.path.join(PROJECT_ROOT, 'main_app/static'),
+    os.path.join(PROJECT_ROOT, ''),
 ]
 #STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
