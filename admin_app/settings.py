@@ -161,12 +161,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 PROJECT_ROOT = os.path.dirname(os.path.dirname(__file__))
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    #os.path.join(BASE_DIR, "static"),
     os.path.join(PROJECT_ROOT, 'static'),
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
-STATIC_URL = '/static/'
+#STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_URL = 'static/'
 
+# Configure Django App for Heroku.
+# import django_on_heroku
+# django_on_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -185,9 +188,7 @@ AUTHENTICATION_BACKENDS = [
     'main_app.backends.CheckPasswordBackend',
 ]
 
-# Configure Django App for Heroku.
-import django_on_heroku
-django_on_heroku.settings(locals())
+
 
 
 #by advice
