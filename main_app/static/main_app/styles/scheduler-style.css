@@ -1,0 +1,62 @@
+/* Important to note that section styles are within body, have access to header, body, footer   */
+
+body {
+    border: black;
+    border-style: solid;
+    background-color: #885466;
+    min-height: 100vh;
+}
+
+
+main{
+    margin-top: 3vh;
+    width: 100%;
+    height: 80vh;
+    border: black;
+    background-color: white;
+    border-bottom-left-radius: 2vh;
+    border-bottom-right-radius: 2vh;
+    
+}
+
+
+
+
+.work-patient-table, .work-ailment-table, .work-doctor-table {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+
+
+}
+
+
+
+
+
+
+
+.work-patient-table th, .work-ailment-table th, .work-doctor-table th { /* table header */
+    text-align: center;
+
+    background-color: #549966;
+    padding: 1vh;
+}
+
+.work-patient-table tr, .work-ailment-table tr, .work-doctor-table tr { /* table row */
+    text-align: center;
+    border: black;
+    border-style: solid;
+    margin-right: 1vw;
+
+}
+
+.work-patient-table td, .work-ailment-table td, .work-doctor-table td { /* table data element */
+    margin-right: 1vw;
+    margin-left: 1vw;
+    padding: 1vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    
+
+}
