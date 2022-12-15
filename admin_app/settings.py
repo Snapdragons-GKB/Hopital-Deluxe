@@ -30,12 +30,24 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECRET_KEY = os.getenv('SECRET_KEY')
 SECRET_KEY = 'django-insecure-w#pcj9s44%swh^#wjjsm*(%c1ozq(mouajtf4v=g(c4!g6j$2-'
 
+IS_HEROKU = "DYNO" in os.environ
+
+#Heroku byline
+if IS_HEROKU:
+    ALLOWED_HOSTS = ["*"]
+    DEBUG = False
+else:
+    ALLOWED_HOSTS = []
+    DEBUG = True
+
+
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True if os.getenv('MODE') == 'dev' else False
-DEBUG=True
+# DEBUG=True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
 
 
 # Application definition
