@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
-from logging import _STYLES
+#from logging import _STYLES
 from pathlib import Path
 
 import main_app
@@ -159,11 +159,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
-# PROJECT_ROOT = os.path.dirname(os.path.dirname(__file__))
-# STATICFILES_DIRS = [
-#     #os.path.join(BASE_DIR, "static"),
-#     os.path.join(PROJECT_ROOT, 'static'),
-# ]
+PROJECT_ROOT = os.path.dirname(os.path.dirname(__file__))
+print(PROJECT_ROOT, BASE_DIR)
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    os.path.join(PROJECT_ROOT, 'static'),
+]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATIC_URL = 'static/'
 

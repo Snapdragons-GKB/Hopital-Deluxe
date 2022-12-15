@@ -1,0 +1,51 @@
+/* Important to note that section styles are within body, have access to header, body, footer   */
+
+body {
+    border: black;
+    border-style: solid;
+    background-color: pink;
+    min-height: 100vh;
+
+}
+
+
+main{
+    margin-top: 3vh;
+    width: 100%;
+
+    border: black;
+    background-color: white;
+    border-bottom-left-radius: 2vh;
+    border-bottom-right-radius: 2vh;
+    margin-bottom: 10vh;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20vw;
+    margin: 3vh 0;
+    margin-top: 3vh;
+    padding-bottom: 3vh;
+
+    border-bottom-left-radius: 2vh;
+    border-bottom-right-radius: 2vh;
+}
+
+label {
+
+    width:100px;
+    text-align: left;
+    margin-bottom:1vh;
+    margin-right: 1vw;
+
+}
+
+.landing-about{
+    margin: 0 auto;
+    width: 80%;
+    /* background-color: red;
+    border-style: solid; */
+    margin-bottom: 5vh;
+}
