@@ -168,8 +168,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 # Configure Django App for Heroku.
-# import django_on_heroku
-# django_on_heroku.settings(locals())
+import django_on_heroku
+django_on_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
